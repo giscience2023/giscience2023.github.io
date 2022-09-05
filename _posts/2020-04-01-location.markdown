@@ -1,0 +1,10 @@
+---
+layout: default
+name: location
+img: 1A0080.jpg
+title: Location - Leeds, UK.
+description: |
+one_column: false
+---
+
+XXXX Location

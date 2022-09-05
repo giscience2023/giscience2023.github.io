@@ -1,0 +1,15 @@
+---
+layout: default
+name: dates
+img: 1A0080.jpg
+title: Key Dates
+Description: |
+one_column: false
+---
+
+ - Full paper submission: Mon 30th Jan 2023 
+ - Short paper submission: Mon 8th May 2023
+ - Full paper acceptance notification: Friday 24th March 2023
+ - Short paper acceptance notification: Friday 23rd June 2023
+ 
+

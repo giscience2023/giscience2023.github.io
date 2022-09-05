@@ -1,0 +1,14 @@
+---
+layout: default
+name: cfp
+img: hanoi_bikes.jpg
+title: Call for Papers
+description: |
+one_column: false
+---
+
+Call for papers
+
+ - Submissions types (Short & Long papers)
+ - Guidance/criteria
+
