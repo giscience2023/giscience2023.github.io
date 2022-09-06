@@ -2,13 +2,30 @@
 layout: default
 name: cfp
 img: hanoi_bikes.jpg
-title: Call for Papers
+title: 1st Call for Papers
 description: |
-one_column: false
+one_column: true
 ---
 
-Call for papers
+We are pleased to accept submissions to the full and short paper tracks.
 
- - Submissions types (Short & Long papers)
- - Guidance/criteria
+### Full Paper Track
 
+Full papers will be thoroughly reviewed by at least three members of the international program committee. High-quality submissions will be accepted for presentation at the conference and published in LIPIcs, the Leibniz International Proceedings in Informatics series. Manuscripts must describe original work that has neither been published before, nor is currently under review elsewhere. Papers must be written in English and should not exceed fifteen pages (including title, figures, and references) in the required layout (see below).
+
+### Short Paper Track
+
+Short papers that report on work in progress will be reviewed by at least three members of the international program committee. Accepted papers in this track will be selected for oral presentation and will be published in the LIPIcs conference proceedings.
+Short papers must be written in English and should not exceed six pages (including title, figures, and references) in the requested LIPIcs layout. In addition, each submission must have a subtitle 'Short Paper' to distinguish Full papers from Short papers.
+
+### Formatting instructions
+
+The layout of any submission to GIScience, whether full paper or short paper, should follow the [sample article provided by LIPIcs](http://drops.dagstuhl.de/styles/lipics-v2016/lipics-v2016-authors.tgz). LIPIcs also provides a LaTeX class and template for papers. Authors unfamiliar with LaTeX, but keen to try, are highly encouraged to use [Overleaf](http://www.overleaf.com), an online LaTeX editor that is easy to use and does not require any local installation. Overleaf comes with the [LIPIcs class and template pre-loaded](https://www.overleaf.com/latex/templates/article-for-the-lipics-series/qmwncxspzfst), so you can immediately start typing. Overleaf is also a collaborative writing tool, allowing multiple authors to work on their paper concurrently. Authors who want to use other text editors should stay close to the sample article's layout for their paper submitted for review. Should their papers be accepted for publication, they have to be converted to LaTeX using the LIPIcs LaTeX class and template. Authors are responsible for the conversion of their papers to LaTeX. 
+
+### Submission instructions and publication details (all tracks)
+
+**Submission for review**. First submissions (for review) should be provided in PDF format through the conference website on [Easychair](https://easychair.org/conferences/?conf=giscience23).
+
+**Final submission**. The accepted and revised papers must also be submitted through [Easychair](https://easychair.org/conferences/?conf=giscience23), but now as a zipped, complete LaTeX project, including all tex source files, figures in jpg or png, a bib file (alternatively, a bibliography section included in the tex file), and a pdf, all camera-ready.
+
+**Publication**. In order for an accepted paper to be included in the conference program and published in the proceedings at least one of the paper authors has to register by the author registration deadline above (see <a href="#dates">Key Dates</a>).
