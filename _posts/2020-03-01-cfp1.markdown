@@ -24,8 +24,8 @@ The layout of any submission to GIScience, whether full paper or short paper, sh
 
 ### Submission instructions and publication details (all tracks)
 
-**Submission for review**. First submissions (for review) should be provided in PDF format through the conference website on [Easychair](https://easychair.org/conferences/?conf=giscience23).
+**Submission for review**. First submissions (for review) should be provided in PDF format through the conference website on [Easychair](https://easychair.org/conferences/?conf=giscience2023).
 
-**Final submission**. The accepted and revised papers must also be submitted through [Easychair](https://easychair.org/conferences/?conf=giscience23), but now as a zipped, complete LaTeX project, including all tex source files, figures in jpg or png, a bib file (alternatively, a bibliography section included in the tex file), and a pdf, all camera-ready.
+**Final submission**. The accepted and revised papers must also be submitted through [Easychair](https://easychair.org/conferences/?conf=giscience2023), but now as a zipped, complete LaTeX project, including all tex source files, figures in jpg or png, a bib file (alternatively, a bibliography section included in the tex file), and a pdf, all camera-ready.
 
 **Publication**. In order for an accepted paper to be included in the conference program and published in the proceedings at least one of the paper authors has to register by the author registration deadline above (see <a href="#dates">Key Dates</a>).
