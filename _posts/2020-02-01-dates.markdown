@@ -22,7 +22,7 @@ Short papers:
  
 Conference:
 
- - GIScience 2018 Workshops: 12th September 2023
- - GIScience 2018 Conference: 13-15 September 2023
+ - GIScience 2023 Workshops: 12th September 2023
+ - GIScience 2023 Conference: 13-15 September 2023
  
 

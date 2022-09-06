@@ -20,5 +20,5 @@ Programme Chairs:
  - Dr [Roger Beecham](https://www.roger-beecham.com/), University of Leeds
  - Dr [Jed Long](https://jedalong.github.io/), Western University
  - Dr [Dianna Smith](https://www.southampton.ac.uk/people/5xfq7k/doctor-dianna-smith), University of Southampton
- - Dr [Qunshan Zhou](https://www.gla.ac.uk/schools/socialpolitical/staff/qunshanzhao/)
+ - Dr [Qunshan Zhao](https://www.gla.ac.uk/schools/socialpolitical/staff/qunshanzhao/), University of Glasgow
  - Dr [Sarah Wise](https://www.ucl.ac.uk/bartlett/casa/dr-sarah-wise), Univesity College London
