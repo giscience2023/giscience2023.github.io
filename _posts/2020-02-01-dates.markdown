@@ -1,7 +1,7 @@
 ---
 layout: default
 name: dates
-img: 1A0080.jpg
+img: Parkinson_Court_Exhibition_In_Use_7.jpg
 title: Key Dates
 Description: |
 one_column: false

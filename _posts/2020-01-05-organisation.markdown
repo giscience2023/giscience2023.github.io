@@ -2,7 +2,7 @@
 layout: default
 name: organisation
 title: Organisation and Location
-img: hanoi_bikes.jpg
+img: Parkinson_Building_Exterior_at_Night.jpg
 one_column: false
 description: |
 ---
