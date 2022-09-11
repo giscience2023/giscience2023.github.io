@@ -2,7 +2,7 @@
 layout: default
 name: cfp
 img: hanoi_bikes.jpg
-title: 1st Call for Papers
+title: 1st Call for Papers (September 2023)
 description: |
 one_column: true
 ---
