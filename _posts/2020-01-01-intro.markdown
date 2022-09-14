@@ -6,7 +6,7 @@ one_column: true
 description: |
 ---
 
-The **Twelth International Conference on Geographic Information Science** will be held in **Leeds, United Kingdom**, on **13-15 September 2023** (with workshops and welcome reception on 12 September). It is being hosted by the University of Leeds in collaboration with the University of Glasgow. 
+The **Twelfth International Conference on Geographic Information Science** will be held in **Leeds, United Kingdom**, on **13-15 September 2023** (with workshops and welcome reception on 12 September). It is being hosted by the University of Leeds in collaboration with the University of Glasgow. 
 [GIScience](http://giscience.org/) is the flagship conference in the field of Geographic Information Science and the UK conference will continue the highly successful series that started in 2000.
 
 The [GIScience conference series](http://giscience.org/) regularly brings together more than 300 international participants from academia, industry, and government to discuss and advance the state-of-the-art in geographic information science. 12 September 2023 is dedicated to Workshops and Tutorials (the call for participation will be announced in December 2022). 
