@@ -7,7 +7,7 @@ one_column: false
 description: |
 ---
 
-The conference will organised by the [School of Geography](https://environment.leeds.ac.uk/geography), University of Leeds, and the [School of Political and Social Sciences](https://www.gla.ac.uk/schools/socialpolitical/), University of Glasgow.
+The conference will be organised by the [School of Geography](https://environment.leeds.ac.uk/geography), University of Leeds, and the [School of Political and Social Sciences](https://www.gla.ac.uk/schools/socialpolitical/), University of Glasgow.
 
 General Chairs:
 
