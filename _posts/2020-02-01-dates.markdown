@@ -3,22 +3,26 @@ layout: default
 name: dates
 img: Parkinson_Court_Exhibition_In_Use_7.jpg
 title: Key Dates
-Description: |
+description: |
 one_column: false
 ---
 
 Full papers:
 
- - Submission: Mon 30th Jan 2023 
+ - Submission deadline: Mon 30th Jan 2023 
  - Acceptance notification: Friday 24th March 2023
  - Conference registration deadline: 3rd July 2023
 
 Short papers:
 
- - Submission: Mon 8th May 2023
+ - Submission deadline: Mon 8th May 2023
  - Acceptance notification: Friday 23rd June 2023
  - Conference registration deadline: 3rd July 2023
- 
+
+Workshops:
+
+ - Submission deadline: Mon 16th Jan 2023
+ - Acceptance notification: Fri 27th Jan 2023
  
 Conference:
 

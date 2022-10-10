@@ -1,13 +1,13 @@
 ---
 layout: default
 name: cfp
-img: hanoi_bikes.jpg
-title: 1st Call for Papers (September 2023)
+title: Call for Papers (September 2023)
 description: |
 one_column: true
 ---
 
-We are pleased to accept submissions to the full and short paper tracks.
+
+We particularly welcome submissions from researchers from the Global South and lower- or middle-income countries, and we anticipate being able to provide financial support for conference attendance for accepted papers.
 
 ### Full Paper Track
 
@@ -29,3 +29,8 @@ The layout of any submission to GIScience, whether full paper or short paper, sh
 **Final submission**. The accepted and revised papers must also be submitted through [Easychair](https://easychair.org/conferences/?conf=giscience2023), but now as a zipped, complete LaTeX project, including all tex source files, figures in jpg or png, a bib file (alternatively, a bibliography section included in the tex file), and a pdf, all camera-ready.
 
 **Publication**. In order for an accepted paper to be included in the conference program and published in the proceedings at least one of the paper authors has to register by the author registration deadline above (see <a href="#dates">Key Dates</a>).
+
+Full paper submission deadline: Mon 30th Jan 2023 
+
+Short paper submission daedline: Mon 8th May 2023
+
