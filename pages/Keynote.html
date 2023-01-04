@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mohamed R Ibrahim">
+    <meta name="generator" content="version 0.1">
+    <title>GIScience 2023</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars/">
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+ 
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+
+
+
+
+
+      .btn-toolbar {
+    display: flex;
+    justify-content: space-between;
+      }
+
+      .left-group {
+          display: flex;
+          flex: 1;
+          justify-content: flex-start;
+      }
+
+      .right-group {
+          display: flex;
+          flex: 1;
+          justify-content: flex-end;
+      }
+
+
+
+
+.container2 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+    
+
+
+
+
+<!-- navbar-start -->
+
+<main>
+  
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-light rounded fixed-top" aria-label="Eleventh navbar example">
+      <div class="container-fluid">
+
+
+        <img src="../materials/website_logo.png" style="width:120px"  href="#">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+  
+
+
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about_giscience.html">GIScience</a></li>
+                <li><a class="dropdown-item" href="theme.html">Conference theme </a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Participation</a>
+              <ul class="dropdown-menu">
+
+                <li><a class="dropdown-item" href="calls_paper.html">Call for papers</a></li>
+                <li><a class="dropdown-item" href="calls_workshop.html">Call for workshops</a></li>
+
+
+                <li><a class="dropdown-item" href="registeration.html">Registration</a></li>
+                <li><a class="dropdown-item" href="dates.html">Dates</a></li>
+                <li><a class="dropdown-item" href="sponsorship.html">Sponsorship</a></li>
+                <li><a class="dropdown-item" href="conduct.html">Conference conduct of practice</a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="program.html">Conference program</a></li>
+                <li><a class="dropdown-item" href="Keynote.html">Keynote speakers</a></li>
+                <li><a class="dropdown-item" href="panel.html">Panel discussion</a></li>
+                <li><a class="dropdown-item" href="papers.html">Accepted papers</a></li>
+                <li><a class="dropdown-item" href="workshop.html">Workshops</a></li>
+              </ul>
+            </li>
+
+
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Organization</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="organization.html">Organization</a></li>
+                <li><a class="dropdown-item" href="committee.html">Program committee</a></li>
+              </ul>
+            </li>
+
+
+
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Venue</a>
+              <ul class="dropdown-menu">
+
+                <li><a class="dropdown-item" href="venue.html">Conference Venue and travel</a></li>
+                <li><a class="dropdown-item" href="attractions.html">Attractions</a></li>
+                <li><a class="dropdown-item" href="accommodation.html">Accommodation</a></li>
+
+              </ul>
+            </li>
+
+
+  
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+  </div>
+<!-- navbar-end -->
+
+
+
+
+
+
+  <h1 class="visually-hidden">GISscience 2023</h1>
+
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Keynote speakers</h1>
+
+    </div>
+   
+
+        
+
+
+  <div class="container my-5">
+  
+
+   <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <p class="lead">
+    
+         <p class="lead mb-1" style="text-align:justify">
+
+        We are delighted to welcome the following keynote speakers: </p>
+        
+
+   <h1 class="display-6 fw" style="text-align:justify"><a href="https://aphrc.org/person/caroline-kabaria/">Caroline Kabaria</a></h1>
+
+<p style="text-align:justify" ><strong>(African Population and Health Research Center)</strong> </p>
+
+<p style="text-align:justify">
+ Dr Kabaria is a Research Scientist with expertise in Geoinformatics (GIS), Remote Sensing, Spatial Modelling and will be working with other researchers at the APHRC to develop methodological frameworks to integrate spatial evaluation in estimating the impacts of interventions, policy regulations and social trends with a spatial dimension.
+
+Dr Kabaria holds a PhD (2016) specializing in Spatial Epidemiology from the Open University, UK. Her research focused on mapping and understanding changing malaria transmission patterns within urban settings in Africa. Prior to joining APHRC, Dr Kabaria was a Post-Doctoral researcher at KEMRI-Wellcome Trust Research Programme evaluating within spatial frameworks, the factors that influence disease transmission, the application of population and urbanization mapping for disease burden estimation as well as evaluating the impact of control interventions on transmission. 
+</p>
+
+
+
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="../materials/keynote_headshots/caroline.jpg" alt="" width="420">
+      </div>
+    </div>
+
+
+
+
+<div><p></p></div>
+<div class="col-lg-7 p-3 p-lg-5 pt-lg-3"></div>
+
+
+
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <p class="lead">
+    
+   
+
+
+
+<h1 class="display-6 fw" style="text-align:justify"><a href="https://www.gla.ac.uk/schools/socialpolitical/staff/joaoportodealbuquerque/">Joao Porto De Albuquerque </a></h1>
+
+<p style="text-align:justify" ><strong>(University of Glasgow)</strong> </p>
+
+<p style="text-align:justify">
+Professor Porto de Albuquerque is Professor in Urban Analytics at Urban Studies in the School of Social and Political Sciences at the University of Glasgow and Deputy Director of the Urban Big Data Centre (UBDC), where he leads the theme on "Urban Sustainability and Participation". He is also an associate member of the Centre for Research & Development in Adult and Lifelong Learning (CR&DALL) at the School of Education.
+
+Professor Porto de Albuquerque is leading a research programme centred around the empowerment of vulnerable and deprived communities with citizen-generated data to improve resilience to health and environmental risks. His transdisciplinary research on socio-ecological-technical urban systems not only emphasises cross-border collaboration between the (environmental) sciences, social sciences and humanities; it also goes beyond academic disciplines to engage in co-production and participatory research with non-academic societal/indigenous stakeholders. 
+
+
+</p>
+
+
+
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="../materials/keynote_headshots/JPA_Photo.jpg" alt="" width="420">
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div><p></p></div>
+<div class="col-lg-7 p-3 p-lg-5 pt-lg-3"></div>
+
+
+
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <p class="lead">
+    
+   
+
+
+<h1 class="display-6 fw" style="text-align:justify"><a href="https://iiasa.ac.at/staff/linda-see">Linda See </a></h1>
+
+<p style="text-align:justify" ><strong>(International Institute for Applied Systems Analysis)</strong> </p>
+
+<p style="text-align:justify">
+Dr See, who holds a PhD from the School of Geography, University of Leeds, has research interests include artificial intelligence-based methods, geographic information systems (GIS), land cover, crowdsourcing and citizen science. As part of the Novel Data Ecosystems for Sustainability (NODES) group in the Advancing Systems Analysis (ASA) program, she works with the Geo-Wiki team on crowdsourcing of land cover, quality assurance of crowdsourced data, and community building. She has coordinated the Austrian ASAP-10 LACO-Wiki project, which is an online tool for the validation of land cover and the Austrian-funded project ADAPT-UHI, which has developed strategies for climate change mitigation and adaptation in small to medium-sized cities in Austria. She has supported the H2020-funded LandSense Citizen Observatory, in particular the pilot studies involving the French National Mapping Agency (IGN) and BirdLife International, and is a member of three Communities of Practice in the H2020 WeObserve project. She is an editor of the journal Environment and Planning B: Urban Analytics and City Science. 
+
+
+</p>
+
+
+
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="../materials/keynote_headshots/LindaSee.jpg" alt="" width="420">
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<div><p></p></div>
+<div class="col-lg-7 p-3 p-lg-5 pt-lg-3"></div>
+
+
+
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <p class="lead">
+    
+   
+
+
+<h1 class="display-6 fw" style="text-align:justify"> <a href="https://dusp.mit.edu/people/sarah-williams">Sarah Williams </a></h1>
+
+<p style="text-align:justify" ><strong>(MIT)</strong> </p>
+
+<p style="text-align:justify">
+Dr Williams is an Associate Professor of Technology and Urban Planning at the Massachusetts Institute of Technology (MIT) where she is also Director of the Civic Data Design Lab and the Leventhal Center for Advanced Urbanism. Williams’ combines her training in computation and design to create communication strategies that expose urban policy issues to broad audiences and create civic change. She calls the process Data Action, which is also the name of her recent book published by MIT Press. Williams is co-founder
+
+and developer of Envelope.city, a web-based software product that visualizes and allows users to modify zoning in New York City. Before coming to MIT, Williams was Co-Director of the Spatial Information Design Lab at Columbia University’s Graduate School of Architecture Planning and Preservation (GSAPP). Her design work has been widely exhibited including work in the Guggenheim, the Museum of Modern Art (MoMA), Venice Biennale, and the Cooper Hewitt Museum. Williams has won numerous awards including being named one of the top 25 technology planners and Game Changer by Metropolis Magazine. 
+
+
+</p>
+
+
+
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="../materials/keynote_headshots/headshot_sarah2022.jpg" alt="" width="420">
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="b-example-divider"></div>
+
+
+
+  <div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom">Sponsors</h2>
+
+        <div style="align-content: center;">
+        <img src="../materials/leeds_logo.jpg" style="width:120px"  href="#">
+
+
+
+        <img src="../materials/logo1.png" style="width:120px"  href="#">
+
+
+
+        <img src="../materials/alan_turing_logo.jpg" style="width:120px"  href="#">
+    
+          </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <img src="../materials/website_logo_footer.png" style="width:120px"  href="#">
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">&copy; 2022 GIScience</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+
+}
+
+
+</script>
+
+
+
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+  </body>
+</html>

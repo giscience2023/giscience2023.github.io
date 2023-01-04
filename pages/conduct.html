@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mohamed R Ibrahim">
+    <meta name="generator" content="version 0.1">
+    <title>GIScience 2023</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars/">
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+
+
+
+
+
+      .btn-toolbar {
+    display: flex;
+    justify-content: space-between;
+      }
+
+      .left-group {
+          display: flex;
+          flex: 1;
+          justify-content: flex-start;
+      }
+
+      .right-group {
+          display: flex;
+          flex: 1;
+          justify-content: flex-end;
+      }
+
+
+
+
+.container2 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+    
+
+
+
+
+<!-- navbar-start -->
+
+
+<main>
+  
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-light rounded fixed-top" aria-label="Eleventh navbar example">
+      <div class="container-fluid">
+
+
+        <img src="../materials/website_logo.png" style="width:120px"  href="#">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+  
+
+
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about_giscience.html">GIScience</a></li>
+                <li><a class="dropdown-item" href="theme.html">Conference theme </a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Participation</a>
+              <ul class="dropdown-menu">
+
+                <li><a class="dropdown-item" href="calls_paper.html">Call for papers</a></li>
+                <li><a class="dropdown-item" href="calls_workshop.html">Call for workshops</a></li>
+
+
+                <li><a class="dropdown-item" href="registeration.html">Registration</a></li>
+                <li><a class="dropdown-item" href="dates.html">Dates</a></li>
+                <li><a class="dropdown-item" href="sponsorship.html">Sponsorship</a></li>
+                <li><a class="dropdown-item" href="conduct.html">Conference conduct of practice</a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="program.html">Conference program</a></li>
+                <li><a class="dropdown-item" href="Keynote.html">Keynote speakers</a></li>
+                <li><a class="dropdown-item" href="panel.html">Panel discussion</a></li>
+                <li><a class="dropdown-item" href="papers.html">Accepted papers</a></li>
+                <li><a class="dropdown-item" href="workshop.html">Workshops</a></li>
+              </ul>
+            </li>
+
+
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Organization</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="organization.html">Organization</a></li>
+                <li><a class="dropdown-item" href="committee.html">Program committee</a></li>
+              </ul>
+            </li>
+
+
+
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Venue</a>
+              <ul class="dropdown-menu">
+
+                <li><a class="dropdown-item" href="venue.html">Conference Venue and travel</a></li>
+                <li><a class="dropdown-item" href="attractions.html">Attractions</a></li>
+                <li><a class="dropdown-item" href="accommodation.html">Accommodation</a></li>
+
+              </ul>
+            </li>
+
+
+  
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+  </div>
+<!-- navbar-end -->
+
+
+
+
+
+
+  <h1 class="visually-hidden">GISscience 2023</h1>
+
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Conference code of conduct</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4" style="text-align:justify">
+
+
+<p class="lead mb-4" style="text-align:justify">All attendees, speakers, sponsors and volunteers at GIScience 2023 are required to agree with the following code of conduct. organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody. </p>
+
+
+<p class="lead mb-4" style="text-align:justify">
+This code of conduct has been adapted from the  <a href="https://berlincodeofconduct.org/">Berlin Code of Conduct</a>, released under the Creative Commons <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license. </p>
+
+
+    <h1 class="display-6 fw">The Quick Version</h1>
+
+<p class="lead mb-4" style="text-align:justify">
+GIScience 2023 is committed to providing a harassment-free conference experience for everyone. We do not tolerate harassment of conference participants in any form. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers. </p>
+
+
+
+
+
+    <h1 class="display-6 fw">The Longer Version</h1>
+
+
+    <h1 class="display-10 fw">Purpose</h1>
+
+
+<p class="lead mb-4" style="text-align:justify">
+A primary goal of all the conferences and user groups that refer to this Code of Conduct is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, ethnicity, socioeconomic status and religion (or lack thereof). </p>
+
+
+<p class="lead mb-4" style="text-align:justify">
+This Code of Conduct outlines our expectations for all those who participate in our conference, as well as the consequences for unacceptable behaviour. </p>
+
+
+<p class="lead mb-4" style="text-align:justify">
+We invite all those who participate in our events to help us create safe and positive experiences for everyone. </p>
+
+
+    <h1 class="display-10 fw">Open Citizenship</h1>
+
+<p class="lead mb-4" style="text-align:justify">
+A supplemental goal of this Code of Conduct is to increase open [source/culture/tech] citizenship by encouraging participants to recognize and strengthen the relationships between our actions and their effects on our community.</p>
+
+
+<p class="lead mb-4" style="text-align:justify">
+Communities mirror the societies in which they exist and positive action is essential to counteract the many forms of inequality and abuses of power that exist in society.</p>
+
+<p class="lead mb-4" style="text-align:justify">
+If you see someone who is making an extra effort to ensure our community is welcoming, friendly, and encourages all participants to contribute to the fullest extent, we want to know.</p>
+
+
+
+    <h1 class="display-10 fw">Expected Behaviour</h1>
+
+
+
+<div style="text-align:left">
+   <ul>
+  <li>Participate in an authentic and active way. In doing so, you contribute to the health and longevity of this community.</li>
+  <li>Exercise consideration and respect in your speech and actions. </li>
+  <li>Attempt collaboration before conflict.</li>
+
+<li>Refrain from demeaning, discriminatory, or harassing behavior and speech.</li>
+
+<li>Be mindful of your surroundings and of your fellow participants. Alert conference organisers if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential. You can find a list of organisers to contact on the <a href="organization.html">organisation</a> page.</li>
+
+
+
+
+</ul> 
+
+</div>
+</p>
+
+
+
+
+    <h1 class="display-10 fw">Unacceptable Behaviour</h1>
+
+  <p class="lead mb-4" style="text-align:justify">
+
+Unacceptable behaviours include: intimidating, harassing, abusive, discriminatory, derogatory or demeaning speech or actions by any participant in our community online, at all related events and in one-on-one communications carried out in the context of community business. Community event venues may be shared with members of the public; please be respectful to all patrons of these locations. </p>
+
+
+
+<p class="lead mb-4" style="text-align:justify">
+Harassment includes: harmful or prejudicial verbal or written comments related to gender, sexual orientation, race, religion, disability; inappropriate use of nudity and/or sexual images (including presentation slides); inappropriate depictions of violence (including presentation slides); deliberate intimidation, stalking or following; harassing photography or recording; sustained disruption of talks or other events; inappropriate physical contact, and unwelcome sexual attention. </p>
+
+
+
+ <h1 class="display-10 fw">Consequences of Unacceptable Behaviour</h1>
+
+<p class="lead mb-4" style="text-align:justify">
+
+Unacceptable behaviour from any community member, including sponsors and those with decision-making authority, will not be tolerated. Anyone asked to stop unacceptable behaviour is expected to comply immediately. </p>
+
+<p class="lead mb-4" style="text-align:justify">
+
+If a community member engages in unacceptable behaviour, the organisers may take any action they deem appropriate, up to and including a temporary ban or permanent expulsion from the conference without warning (and without refund). </p>
+
+
+ <h1 class="display-10 fw">If You Witness or Are Subject to Unacceptable Behaviour</h1>
+
+<p class="lead mb-4" style="text-align:justify">
+If you are subject to or witness unacceptable behaviour, or have any other concerns, please notify a conference organiser as soon as possible. You can find a list of organisers to contact on the <a href="organization.html">organisation</a> page. Additionally, organisers are available to help community members engage with local law enforcement or to otherwise help those experiencing unacceptable behaviour feel safe. </p>
+
+
+ <h1 class="display-10 fw">Addressing Grievances</h1>
+
+
+<p class="lead mb-4" style="text-align:justify">
+
+If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify one of the event <a href="organization.html">organisers</a> with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.
+Scope </p>
+
+<p class="lead mb-4" style="text-align:justify">
+
+We expect all community participants (contributors, paid or otherwise; sponsors; and other guests) to abide by this Code of Conduct in all conference venues — online and in-person — as well as in all one-on-one communications pertaining to conference business. </p>
+
+
+
+     
+    </div>
+  </div>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="b-example-divider"></div>
+
+
+
+  <div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom">Sponsors</h2>
+
+        <div style="align-content: center;">
+        <img src="../materials/leeds_logo.jpg" style="width:120px"  href="#">
+
+
+
+        <img src="../materials/logo1.png" style="width:120px"  href="#">
+
+
+
+        <img src="../materials/alan_turing_logo.jpg" style="width:120px"  href="#">
+    
+          </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <img src="../materials/website_logo_footer.png" style="width:120px"  href="#">
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">&copy; 2022 GIScience</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+
+}
+
+
+</script>
+
+
+
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+  </body>
+</html>

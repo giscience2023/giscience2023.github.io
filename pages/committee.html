@@ -1,0 +1,2589 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mohamed R Ibrahim">
+    <meta name="generator" content="version 0.1">
+    <title>GIScience 2023</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars/">
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+
+
+
+
+
+      .btn-toolbar {
+    display: flex;
+    justify-content: space-between;
+      }
+
+      .left-group {
+          display: flex;
+          flex: 1;
+          justify-content: flex-start;
+      }
+
+      .right-group {
+          display: flex;
+          flex: 1;
+          justify-content: flex-end;
+      }
+
+
+
+
+.container2 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+    
+
+
+
+
+<!-- navbar-start -->
+
+
+<main>
+  
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-light rounded fixed-top" aria-label="Eleventh navbar example">
+      <div class="container-fluid">
+
+
+        <img src="../materials/website_logo.png" style="width:120px"  href="#">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+  
+
+
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about_giscience.html">GIScience</a></li>
+                <li><a class="dropdown-item" href="theme.html">Conference theme </a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Participation</a>
+              <ul class="dropdown-menu">
+
+                <li><a class="dropdown-item" href="calls_paper.html">Call for papers</a></li>
+                <li><a class="dropdown-item" href="calls_workshop.html">Call for workshops</a></li>
+
+
+                <li><a class="dropdown-item" href="registeration.html">Registration</a></li>
+                <li><a class="dropdown-item" href="dates.html">Dates</a></li>
+                <li><a class="dropdown-item" href="sponsorship.html">Sponsorship</a></li>
+                <li><a class="dropdown-item" href="conduct.html">Conference conduct of practice</a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="program.html">Conference program</a></li>
+                <li><a class="dropdown-item" href="Keynote.html">Keynote speakers</a></li>
+                <li><a class="dropdown-item" href="panel.html">Panel discussion</a></li>
+                <li><a class="dropdown-item" href="papers.html">Accepted papers</a></li>
+                <li><a class="dropdown-item" href="workshop.html">Workshops</a></li>
+              </ul>
+            </li>
+
+
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Organization</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="organization.html">Organization</a></li>
+                <li><a class="dropdown-item" href="committee.html">Program committee</a></li>
+              </ul>
+            </li>
+
+
+
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Venue</a>
+              <ul class="dropdown-menu">
+
+                <li><a class="dropdown-item" href="venue.html">Conference Venue and travel</a></li>
+                <li><a class="dropdown-item" href="attractions.html">Attractions</a></li>
+                <li><a class="dropdown-item" href="accommodation.html">Accommodation</a></li>
+
+              </ul>
+            </li>
+
+
+  
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+  </div>
+<!-- navbar-end -->
+
+
+
+
+
+
+  <h1 class="visually-hidden">GISscience 2023</h1>
+
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Program committee</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4" style="text-align:left">
+
+
+
+<div class=WordSection1  >
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='mso-cellspacing:0cm;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm' >
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td style='padding:0cm 0cm 0cm 0cm'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+   mso-fareast-language:EN-GB'>First name<o:p></o:p></span></b></p>
+   </td>
+   <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+   mso-fareast-language:EN-GB'>Last name<o:p></o:p></span></b></p>
+   </td>
+   <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman"; 
+   mso-fareast-language:EN-GB'>Organization<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Seth<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Spielman<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Colorado Boulder<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jan-Henrik<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Haunert</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universität
+  Bonn<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Eliseo<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Clementini</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of L'Aquila<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Shih-Lung<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Shaw<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of Geography, University of Tennessee<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Gennady<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Andrienko</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Fraunhofer<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Dimitris<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Kotzinos</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>ETIS
+  Lab / CY <span class=SpellE>cergy</span> Paris University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Martin<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Swobodzinski</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Portland
+  State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Sara
+  Irina<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Fabrikant<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Zurich<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bashkim</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Idrizi</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Geo-SEE<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hardy<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Pundt</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Harz
+  University of Applied Sciences<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Nick<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hood<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Leeds<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Johannes<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Schöning</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of St. Gallen<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Sandro<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bimonte</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>INRAE<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Gerard<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Heuvelink</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Wageningen
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Tomi<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Kauppinen</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of Computer Science, Aalto University School of Science<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jantien</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Stoter</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Delft
+  University of Technology<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Joana<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Barros<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Birkbeck,
+  University of London<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Filipe<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Meneses</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Minho<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Shaowen</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Wang<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Illinois at Urbana-Champaign<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Maguelonne</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Teisseire</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Irstea</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> - UMR <span class=SpellE>Tetis</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Sabine<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Timpf</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Geoinformatics,
+  Department of Geography, University of Augsburg<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jiaqi<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ge<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Leeds<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ling<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bian</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of Geography, University at Buffalo<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Yongze</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Song<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>School
+  of Design and the Built Environment, Curtin University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ana
+  Paula<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Afonso<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>LASIGE,
+  <span class=SpellE>Faculdade</span> de <span class=SpellE>Ciências</span>, <span
+  class=SpellE>Universidade</span> de <span class=SpellE>Lisboa</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Francisco
+  J.<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Lopez-<span
+  class=SpellE>Pellicer</span><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Zaragoza<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Michael<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Leitner<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Louisiana
+  State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>David<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>O'Sullivan<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Victoria
+  University of Wellington<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Oliver<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Schmitz<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of Physical Geography, Faculty of Geosciences, Utrecht University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Lars<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bodum</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Aalborg
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ali<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Mansourian</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Lund
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Marco<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Painho</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universidade</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> NOVA de <span class=SpellE>Lisboa</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Dirk<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Burghardt<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>TU
+  Dresden<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Marc<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>van <span
+  class=SpellE>Kreveld</span><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Utrecht
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bernhard<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Höfle</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Heidelberg
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:36'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Grant<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>McKenzie<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>McGill
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:37'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Stephan<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Winter<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>The
+  University of Melbourne<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:38'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Eunhye</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Yoo</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  at Buffalo<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:39'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Arika<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ligmann-Zielinska</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Michigan
+  State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:40'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Sytze</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>de
+  Bruin<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Wageningen
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:41'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Adam<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Dennett<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  College London<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:42'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Natalia<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Andrienko</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Fraunhofer<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:43'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Martin<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Raubal</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>ETH
+  Zurich<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:44'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Phaedon</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Kyriakidis</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Cyprus
+  University of Technology<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:45'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Somayeh<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Dodge<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of California Santa Barbara<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:46'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Michela<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bertolotto</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  College Dublin<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:47'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Sven<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Casteleyn</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universitat</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> <span class=SpellE>Jaume</span> I<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:48'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bisheng</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Yang<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Wuhan
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:49'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Pedro<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Cabral<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>NOVA
+  IMS<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:50'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Lars<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Harrie</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>GIS-centre,
+  Lund University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:51'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Carsten<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Keßler</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of Planning, Aalborg University Copenhagen<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:52'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Benjamin<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Adams<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Canterbury<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:53'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Thomas<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Brinkhoff<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jade
+  University Oldenburg<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:54'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ebba<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ossiannilsson</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>The
+  Swedish Association for Distance Education<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:55'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Clio<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Andris<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Georgia
+  Tech<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:56'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Thomas<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Blaschke</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Salzburg<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:57'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Toshihiro<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Osaragi</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Tokyo
+  Institute of Technology<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:58'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Justine<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Blanford</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  Twente<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:59'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Itzhak<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Benenson</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Tel
+  Aviv University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:60'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Lars<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bernard<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>TU
+  Dresden<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:61'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Like<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jiang<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Leeds<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:62'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Manon<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Predhumeau</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Leeds<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:63'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Juha</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Oksanen<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Finnish
+  Geospatial Research Institute<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:64'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Judith<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Verstegen</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Utrecht
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:65'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Volker<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Paelke</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hochschule
+  Bremen<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:66'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Torsten</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hahmann</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Maine<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:67'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Atsushi<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Nara<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>San
+  Diego State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:68'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Kathleen<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Stewart<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Maryland<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:69'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>John<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Wilson<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Southern California<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:70'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Robert<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Weibel<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Zurich<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:71'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ningchuan</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Xiao<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>The
+  Ohio State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:72'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Stephen<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hirtle</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Pittsburgh<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:73'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Simon<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Scheider</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  Utrecht, Department of Human Geography and Spatial Planning<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:74'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Mir <span
+  class=SpellE>Abolfazl</span><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Mostafavi</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Laval
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:75'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Frank<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ostermann<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Faculty
+  of Geo-Information Science and Earth Observation (ITC)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:76'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Carlos<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Granell</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universtat</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> <span class=SpellE>Jaume</span> I<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:77'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Tobia</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Lakes<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Humboldt-Universität
+  <span class=SpellE>zu</span> Berlin<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:78'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Melih</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Basaraner</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Yildiz</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> Technical University (YTU), Department of
+  Geomatic Engineering, Division of Cartography<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:79'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hartwig<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hochmair</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Florida<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:80'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Matt<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Duckham<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>RMIT
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:81'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Andy<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Newing</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Leeds<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:82'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Boyan</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Brodaric</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Geological
+  Survey of Canada<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:83'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Christian<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Kray<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Institute
+  for Geoinformatics (<span class=SpellE>ifgi</span>)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:84'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bruno<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Martins<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>IST and
+  INESC-ID - Instituto Superior Técnico, University of Lisbon<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:85'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Peter<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Mooney<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of Computer Science, National University of Ireland Maynooth, <span
+  class=SpellE>Maynooth,Co</span>. Kildare. Ireland<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:86'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>João<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Moura-Pires<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universidade</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> NOVA de <span class=SpellE>Lisboa</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:87'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Peter<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Kiefer<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>ETH
+  Zurich<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:88'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Armanda<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Rodrigues<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universidade</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> NOVA de <span class=SpellE>Lisboa</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:89'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Henning
+  <span class=SpellE>Sten</span><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hansen<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Aalborg
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:90'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ross<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Purves<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Zurich<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:91'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Amy<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Griffin<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>RMIT
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:92'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ed<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Manley<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  College London<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:93'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Wenwen</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Li<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Arizona
+  State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:94'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Joep<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Crompvoets</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>KU
+  Leuven - Public Management Institute<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:95'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Çetin</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Cömert</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Karadeniz
+  Technical University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:96'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Krzysztof<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Janowicz<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of California, Santa Barbara<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:97'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Suzana</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Dragicevic</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Simon
+  Fraser University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:98'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Takeshi<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Shirabe</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>KTH
+  Royal Institute of Technology<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:99'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ming-Hsiang<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Tsou<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>San
+  Diego State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:100'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jorge<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Rocha<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Minho<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:101'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>André<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Skupin</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>San
+  Diego State University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:102'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Petr<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Kubicek</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Masaryk
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:103'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Christophe<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Claramunt</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Naval
+  Academy Research Institute<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:104'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Paolo<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Fogliaroni</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>ESRI<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:105'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Song<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Gao<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Wisconsin-Madison<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:106'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Nico<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Van de <span
+  class=SpellE>Weghe</span><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of Geography, Ghent University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:107'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Alan<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Murray<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of California at Santa Barbara<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:108'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Javier<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Nogueras</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> Iso<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universidad
+  de Zaragoza<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:109'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Shawn<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Laffan<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>The
+  University of New South Wales<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:110'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Claus<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Rinner</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Ryerson
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:111'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Luis M.<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Vilches-Blázquez</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Pontificia
+  Universidad Javeriana<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:112'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Johannes<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Scholz<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Graz
+  University of Technology, Institute of Geodesy<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:113'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jerome<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Gensel</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Laboratoire</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> <span class=SpellE>d'Informatique</span> de
+  Grenoble<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:114'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Michael<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Gould<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>esri</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:115'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Poulicos</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Prastacos</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>FORTH<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:116'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Cidália</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> C.<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Fonte<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Coimbra<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:117'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Christopher<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jones<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Cardiff
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:118'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Rachel<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Oldroyd</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of Leeds<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:119'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bin<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Jiang<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  of <span class=SpellE>Gävle</span><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:120'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Yingjie<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Hu<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>University
+  at Buffalo<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:121'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Clodoveu</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Davis<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Universidade</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'> Federal de Minas Gerais<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:122'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Marek<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Baranowski<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>AGILE<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:123'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Raja<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Sengupta<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>McGill
+  University<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:124'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Serena<o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Coetzee<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Department
+  of <span class=SpellE>Geography,Geoinformatics</span> and Meteorology,
+  University of Pretoria<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:125;mso-yfti-lastrow:yes'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span class=SpellE><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Bailang</span></span><span
+  style='font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+  mso-fareast-language:EN-GB'><o:p></o:p></span></p>
+  </td>
+  <td width=178 style='width:133.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>Yu<o:p></o:p></span></p>
+  </td>
+  <td width=545 style='width:408.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><span style='font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-GB'>East
+  China Normal University<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="b-example-divider"></div>
+
+
+
+  <div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom">Sponsors</h2>
+
+        <div style="align-content: center;">
+        <img src="../materials/leeds_logo.jpg" style="width:120px"  href="#">
+
+
+
+        <img src="../materials/logo1.png" style="width:120px"  href="#">
+
+
+
+        <img src="../materials/alan_turing_logo.jpg" style="width:120px"  href="#">
+    
+          </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <img src="../materials/website_logo_footer.png" style="width:120px"  href="#">
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">&copy; 2022 GIScience</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+
+}
+
+
+</script>
+
+
+
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+  </body>
+</html>
