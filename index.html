@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mohamed R Ibrahim">
-    <meta name="generator" content="version 0.1">
-    <title>GIScience 2023</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Mohamed R Ibrahim">
+		<meta name="generator" content="version 0.1">
+		<title>GIScience 2023</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars/">
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars/">
 
-    
 
-    
 
-<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
+
+		<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<style>
 
 
 
@@ -26,37 +26,37 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
+	max-width: 100%;
+	position: relative;
+	margin: auto;
 }
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a grey background color */
 .prev:hover, .next:hover {
-  background-color: #f1f1f1;
-  color: black;
+	background-color: #f1f1f1;
+	color: black;
 }
 
 
@@ -65,277 +65,238 @@ img {vertical-align: middle;}
 
 
 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+	  .bd-placeholder-img {
+		  font-size: 1.125rem;
+		  text-anchor: middle;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  user-select: none;
+	  }
+
+	  @media (min-width: 768px) {
+		  .bd-placeholder-img-lg {
+			  font-size: 3.5rem;
+		  }
+	  }
+
+	  .b-example-divider {
+		  height: 3rem;
+		  background-color: rgba(0, 0, 0, .1);
+		  border: solid rgba(0, 0, 0, .15);
+		  border-width: 1px 0;
+		  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+	  }
+
+	  .b-example-vr {
+		  flex-shrink: 0;
+		  width: 1.5rem;
+		  height: 100vh;
+	  }
+
+	  .bi {
+		  vertical-align: -.125em;
+		  fill: currentColor;
+	  }
 
+	  .nav-scroller {
+		  position: relative;
+		  z-index: 2;
+		  height: 2.75rem;
+		  overflow-y: hidden;
+	  }
 
+	  .nav-scroller .nav {
+		  display: flex;
+		  flex-wrap: nowrap;
+		  padding-bottom: 1rem;
+		  margin-top: -1px;
+		  overflow-x: auto;
+		  text-align: center;
+		  white-space: nowrap;
+		  -webkit-overflow-scrolling: touch;
+	  }
 
-
-
-
-      .btn-toolbar {
-    display: flex;
-    justify-content: space-between;
-      }
-
-      .left-group {
-          display: flex;
-          flex: 1;
-          justify-content: flex-start;
-      }
-
-      .right-group {
-          display: flex;
-          flex: 1;
-          justify-content: flex-end;
-      }
-
-
-
-
-.container2 {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
 
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
 
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-    </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="navbar.css" rel="stylesheet">
-  </head>
-  <body>
-    
 
+	  .btn-toolbar {
+		  display: flex;
+		  justify-content: space-between;
+	  }
 
+	  .left-group {
+		  display: flex;
+		  flex: 1;
+		  justify-content: flex-start;
+	  }
 
+	  .right-group {
+		  display: flex;
+		  flex: 1;
+		  justify-content: flex-end;
+	  }
 
 
 
-<!-- navbar-start -->
 
-<main>
-  
-  <div class="container">
-    <nav class="navbar navbar-expand-lg bg-light rounded fixed-top" aria-label="Eleventh navbar example">
-      <div class="container-fluid">
+	  .container2 {
+		  position: relative;
+		  text-align: center;
+		  color: white;
+	  }
 
+	  /* Bottom left text */
+	  .bottom-left {
+		  position: absolute;
+		  bottom: 8px;
+		  left: 16px;
+	  }
 
-        <img src="./materials/website_logo.png" style="width:120px"  href="#">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+	  /* Top left text */
+	  .top-left {
+		    position: absolute;
+	  top: 8px;
+	  left: 16px;
+	  }
 
-  
+	  /* Top right text */
+	  .top-right {
+		  position: absolute;
+		  top: 8px;
+		  right: 16px;
+	  }
 
+	  /* Bottom right text */
+	  .bottom-right {
+		    position: absolute;
+		    bottom: 8px;
+		    right: 16px;
+	  }
 
+	  /* Centered text */
+	  .centered {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+	  }
 
-        <div class="collapse navbar-collapse" id="navbarsExample09">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
+		</style>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./pages/about_giscience.html">GIScience</a></li>
-                <li><a class="dropdown-item" href="./pages/theme.html">Conference theme </a></li>
-              </ul>
-            </li>
 
+		<!-- Custom styles for this template -->
+		<link href="navbar.css" rel="stylesheet">
+	</head>
+	<body>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Participation</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./pages/calls_paper.html">Call for papers</a></li>
-                <li><a class="dropdown-item" href="./pages/calls_workshop.html">Calls for workshops</a></li>
-                <li><a class="dropdown-item" href="./pages/registration.html">Registration</a></li>
-                <li><a class="dropdown-item" href="./pages/dates.html">Dates</a></li>
-                <li><a class="dropdown-item" href="./pages/sponsorship.html">Sponsorship</a></li>
-                <li><a class="dropdown-item" href="./pages/conduct.html">Conference conduct of practice</a></li>
-              </ul>
-            </li>
 
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./pages/program.html">Conference program</a></li>
-                <li><a class="dropdown-item" href="./pages/Keynote.html">Keynote speakers</a></li>
-                <li><a class="dropdown-item" href="./pages/panel.html">Panel discussion</a></li>
-                <li><a class="dropdown-item" href="./pages/papers.html">Accepted papers</a></li>
-                <li><a class="dropdown-item" href="./pages/workshop.html">Workshops</a></li>
-              </ul>
-            </li>
 
 
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Organization</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./pages/organization.html">Organization</a></li>
-                <li><a class="dropdown-item" href="./pages/committee.html">Program committee</a></li>
-              </ul>
-            </li>
 
 
+		<!-- navbar-start -->
 
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Venue</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./pages/venue.html">Conference Venue and travel</a></li>
-                <li><a class="dropdown-item" href="./pages/attractions.html">Attractions</a></li>
-                <li><a class="dropdown-item" href="./pages/accommodation.html">Accommodation</a></li>
+		<main>
 
-              </ul>
-            </li>
+			<div class="container">
+				<nav class="navbar navbar-expand-lg bg-light rounded fixed-top" aria-label="Eleventh navbar example">
+					<div class="container-fluid">
 
 
+						<img src="./materials/website_logo.png" style="width:120px"  href="#">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 
 
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/contact.html">Contact</a>
-            </li>
 
 
 
-          </ul>
-        </div>
-      </div>
-    </nav>
+						<div class="collapse navbar-collapse" id="navbarsExample09">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+								</li>
 
-  </div>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="./pages/about_giscience.html">GIScience</a></li>
+										<li><a class="dropdown-item" href="./pages/theme.html">Conference theme </a></li>
+									</ul>
+								</li>
 
-</main>
 
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Participation</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="./pages/calls_paper.html">Call for papers</a></li>
+										<li><a class="dropdown-item" href="./pages/calls_workshop.html">Calls for workshops</a></li>
+										<li><a class="dropdown-item" href="./pages/registration.html">Registration</a></li>
+										<li><a class="dropdown-item" href="./pages/dates.html">Dates</a></li>
+										<li><a class="dropdown-item" href="./pages/sponsorship.html">Sponsorship</a></li>
+										<li><a class="dropdown-item" href="./pages/conduct.html">Conference conduct of practice</a></li>
+									</ul>
+								</li>
 
-<!-- navbar-end -->
 
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Program</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="./pages/program.html">Conference program</a></li>
+										<li><a class="dropdown-item" href="./pages/Keynote.html">Keynote speakers</a></li>
+										<li><a class="dropdown-item" href="./pages/panel.html">Panel discussion</a></li>
+										<li><a class="dropdown-item" href="./pages/papers.html">Accepted papers</a></li>
+										<li><a class="dropdown-item" href="./pages/workshop.html">Workshops</a></li>
+									</ul>
+								</li>
 
 
 
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Organization</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="./pages/organization.html">Organization</a></li>
+										<li><a class="dropdown-item" href="./pages/committee.html">Program committee</a></li>
+									</ul>
+								</li>
 
 
 
 
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Venue</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="./pages/venue.html">Conference Venue and travel</a></li>
+										<li><a class="dropdown-item" href="./pages/attractions.html">Attractions</a></li>
+										<li><a class="dropdown-item" href="./pages/accommodation.html">Accommodation</a></li>
 
+									</ul>
+								</li>
 
 
-<div class="slideshow-container">
-  <div class="mySlides1">
-      <div class="centered" style= " font-size: 1.2em;
-                                  color: white;">
 
-  <br> <strong>GIScience 2023 </strong></br>
- The 12 International Conference on Geographic Information Science.
-       
-  <br>12 - 15th September, 2023. Leeds, UK </br></div>
 
-      <img src="./materials/image_gif.gif" alt="" style="width:100%;">
+								<li class="nav-item">
+									<a class="nav-link" href="./pages/contact.html">Contact</a>
+								</li>
 
 
-  </div>
 
-  <div class="mySlides1">
-    <img src="./materials/image2.jpg" style="width:100%">
-  </div>
+							</ul>
+						</div>
+					</div>
+				</nav>
 
-  <div class="mySlides1">
-    <img src="./materials/image2.jpg" style="width:100%">
-  </div>
+			</div>
 
-  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-</div>
+		</main>
 
 
+		<!-- navbar-end -->
 
 
 
@@ -347,148 +308,191 @@ img {vertical-align: middle;}
 
 
 
+		<div class="slideshow-container">
+			<div class="mySlides1">
+				<div class="centered" style= " font-size: 1.2em;
+											   color: white;">
 
-  <div class="container px-4 py-5" id="hanging-icons">
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-        </div>
-        <div>
-          <h3 class="fs-3">Conference Proceedings</h3>
-          <p>The full GIScience 2023 Conference Proceedings will be coming soon...</p>
-          <a href="./pages/papers.html" class="btn btn-light">
-            Find more
-          </a>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
-        </div>
-        <div>
-          <h3 class="fs-3">Conference program</h3>
-          <p>The full conference program, including workshop timings, social events, and detailed session information is here. All locations are Storey Hall…</p>
-          <a href="./pages/program.html" class="btn btn-light">
-            Find more
-          </a>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-        </div>
-        <div>
-          <h3 class="fs-3">Key Dates</h3>
-          <p>There are upcomming deadlines for the different conference calls. </p>
-          <a href="./pages/dates.html" class="btn btn-light">
-            Find more
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+                    <br/>
+                    <h1 class="display-5 fw-bold" style="text-shadow: 2px 2px #000000">
+                        GIScience 2023
+                    </h1>
+                    
+					The 12 International Conference on Geographic Information Science.
 
-  <div class="b-example-divider"></div>
+					<br>12 - 15th September, 2023. Leeds, UK <br/></div>
 
+				<img src="./materials/image_gif.gif" alt="" style="width:100%;">
 
 
+			</div>
 
+			<div class="mySlides1">
+				<img src="./materials/image2.jpg" style="width:100%">
+			</div>
 
+			<div class="mySlides1">
+				<img src="./materials/image2.jpg" style="width:100%">
+			</div>
 
+			<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+		</div>
 
 
 
 
 
-  <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Sponsors</h2>
 
-        <div style="align-content: center;">
-        <img src="./materials/leeds_logo.jpg" style="width:120px"  href="#">
 
 
 
-        <img src="./materials/logo1.png" style="width:120px"  href="#">
 
 
 
-        <img src="./materials/alan_turing_logo.jpg" style="width:120px"  href="#">
-    
-          </div>
 
 
+		<div class="container px-4 py-5" id="hanging-icons">
+			<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+				<div class="col d-flex align-items-start">
+					<div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+						<svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+					</div>
+					<div>
+						<h3 class="fs-3">Conference Proceedings</h3>
+						<p>The full GIScience 2023 Conference Proceedings will be coming soon...</p>
+						<a href="./pages/papers.html" class="btn btn-light">
+							Find more
+						</a>
+					</div>
+				</div>
+				<div class="col d-flex align-items-start">
+					<div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+						<svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+					</div>
+					<div>
+						<h3 class="fs-3">Conference program</h3>
+						<p>The full conference program, including workshop timings, social events, and detailed session information is here. All locations are Storey Hall…</p>
+						<a href="./pages/program.html" class="btn btn-light">
+							Find more
+						</a>
+					</div>
+				</div>
+				<div class="col d-flex align-items-start">
+					<div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+						<svg class="bi" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+					</div>
+					<div>
+						<h3 class="fs-3">Key Dates</h3>
+						<p>There are upcomming deadlines for the different conference calls. </p>
+						<a href="./pages/dates.html" class="btn btn-light">
+							Find more
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="b-example-divider"></div>
 
 
 
 
-</div>
 
 
 
 
 
-<div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <img src="./materials/website_logo_footer.png" style="width:120px"  href="#">
-      </a>
-      <span class="mb-3 mb-md-0 text-muted">&copy; 2022 GIScience</span>
-    </div>
 
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-    </ul>
-  </footer>
-</div>
 
+		<div class="container px-4 py-5" id="icon-grid">
+			<h2 class="pb-2 border-bottom">Sponsors</h2>
 
+			<div style="align-content: center;">
+				<img src="./materials/leeds_logo.jpg" style="width:120px"  href="#">
 
 
 
+				<img src="./materials/logo1.png" style="width:120px"  href="#">
 
 
 
+				<img src="./materials/alan_turing_logo.jpg" style="width:120px"  href="#">
 
+			</div>
 
 
 
-<script>
-let slideIndex = [1,1];
-let slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
 
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
 
-function showSlides(n, no) {
-  let i;
-  let x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}    
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex[no]-1].style.display = "block";  
 
-}
 
+		</div>
 
-</script>
 
 
 
 
+		<div class="container">
+			<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+				<div class="col-md-4 d-flex align-items-center">
+					<a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+						<img src="./materials/website_logo_footer.png" style="width:120px"  href="#">
+					</a>
+					<span class="mb-3 mb-md-0 text-muted">&copy; 2022 GIScience</span>
+				</div>
 
-    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+				<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+					<li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+					<li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+					<li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+				</ul>
+			</footer>
+		</div>
 
-    
 
-  </body>
+
+
+
+
+
+
+
+
+
+
+		<script>
+			let slideIndex = [1,1];
+			let slideId = ["mySlides1", "mySlides2"]
+			showSlides(1, 0);
+			showSlides(1, 1);
+
+			function plusSlides(n, no) {
+							showSlides(slideIndex[no] += n, no);
+						}
+
+			function showSlides(n, no) {
+							let i;
+							let x = document.getElementsByClassName(slideId[no]);
+							if (n > x.length) {slideIndex[no] = 1}    
+							if (n < 1) {slideIndex[no] = x.length}
+							for (i = 0; i < x.length; i++) {
+											x[i].style.display = "none";  
+										}
+							x[slideIndex[no]-1].style.display = "block";  
+
+						}
+
+
+		</script>
+
+
+
+
+
+		<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+	</body>
 </html>
